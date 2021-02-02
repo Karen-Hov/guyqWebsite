@@ -106,22 +106,22 @@
                                 <th>Վերնագիր</th>
                                 <th>Ենթավերնագիր</th>
                                 <th>Նկարագրություն</th>
-                                <th>Նկար</th>
+{{--                                <th>Նկար</th>--}}
                                 <th>Գործողություն</th>
                             </tr>
                             </thead>
 
                             <tbody>
-{{--@dd($products)--}}
                             @if(isset($products))
                                 @foreach($products as $item)
 
                                     <tr class="gradeX item">
 
-                                        <td>{{isset($item->translate[0]->title)?$item->translate[0]->title:''}} </td>
-                                        <td>{{isset($item->translate[0]->subtitle)?$item->translate[0]->subtitle:''}} </td>
-                                        <td class="p">{!! isset($item->translate[0]->content)?$item->translate[0]->content:''!!}</td>
-                                        <td>{{$item->file }}</td>
+                                        <td>{{isset($item->translate[0]->title)?Str::limit($item->translate[0]->title,50):''}} </td>
+                                        <td>{{isset($item->translate[0]->subtitle)?Str::limit($item->translate[0]->subtitle,50):''}} </td>
+                                        <td class="p">{!! isset($item->translate[0]->content)?Str::limit($item->translate[0]->content,70):''!!}</td>
+{{--                                        <td> <img style="width: 100px;height: 100px" src="{{asset('/storage/products/small').'/'.$item->file}}" alt=""></td>--}}
+
 
                                         <td class="center">
 
@@ -137,11 +137,14 @@
                                             <div id="myModal_{{$loop->index}}" class="modal hide">
                                                 <div class="modal-header">
                                                     <button data-dismiss="modal" class="close" type="button">×</button>
-                                                    <h3 class="text-center"> {{$item->name }}</h3>
-                                                    <h3 class="text-center"> {{$item->email}}</h3>
+                                                    <h4 class="text-center"> {{isset($item->translate[0]->title)?$item->translate[0]->title:'' }}</h4>
+                                                    <h5 class="text-center"> {{isset($item->translate[0]->subtitle)?$item->translate[0]->subtitle:''}}</h5>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p>{{$item->message}}</p>
+                                                    <p>{!! isset($item->translate[0]->content)?$item->translate[0]->content:''!!}</p>
+                                                </div>
+                                                <div class="modal-body">
+                                                     <img style="" src="{{asset('/storage/products/small').'/'.$item->file}}" alt="">
                                                 </div>
                                             </div>
 
@@ -153,9 +156,9 @@
                             </div>
 
 
-                            <div class="myPaginate col-md-6 ml-auto mr-auto">{{ $products->links() }}</div>
 
-                        </div>
+                    <div class="myPaginate col-md-6 ml-auto mr-auto">{{ $products->links() }}</div>
+                </div>
                     </div>
                 </div>
             </div>

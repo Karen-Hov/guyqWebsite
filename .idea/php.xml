@@ -112,6 +112,7 @@
       <path value="$PROJECT_DIR$/vendor/zendesk/zendesk_api_client_php" />
       <path value="$PROJECT_DIR$/vendor/mmucklo/inflect" />
       <path value="$PROJECT_DIR$/vendor/huddledigital/zendesk-laravel" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="PhpUnit">

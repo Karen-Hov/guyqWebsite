@@ -28,13 +28,13 @@
                             @foreach($pricing as $k => $item)
                                 <div class="item ">
                                     <div class="image">
-                                        <img src="{{asset('storage/pricing/picture/'.$item->file)}}" alt="">
+                                        <img src="{{asset('storage/pricing/medium/'.$item->file)}}" alt="">
                                     </div>
                                     <div class="info">
-                                        <h3>{{isset($item->translate[0]->title)?$item->translate[0]->title:''}}</h3>
-                                        {!!  (isset($item->translate[0]->content)?$item->translate[0]->content:'') !!}
+                                        <h4>{{isset($item->translate[0]->title)?Str::limit($item->translate[0]->title,30):''}}</h4>
+                                        {!!  (isset($item->translate[0]->content)?Str::limit($item->translate[0]->content,30):'') !!}
                                         <p class="price">
-                                            {{isset($item->price)?$item->price:''}} $
+                                            {{isset($item->price)?$item->price:''}} ֏
                                         </p>
                                         <button class="getStarted">@lang('button.get_started')</button>
                                     </div>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\FeaturesEditPost;
+use App\Http\Requests\FeaturesPost;
 use App\Models\Features;
 use Illuminate\Http\Request;
 
@@ -17,7 +19,7 @@ class FeaturesController extends Controller
     {
         $features = Features::with(['translate'=>function ($q) {
             $q->where('code','hy');
-        } ])->paginate(10);
+        } ])->paginate(1);
 //dd($features);
         return view('admin.features.index')->with('features',$features);
     }
@@ -39,7 +41,7 @@ class FeaturesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FeaturesPost $request)
     {
         //
         Features::storeFeatures($request);
@@ -78,7 +80,7 @@ class FeaturesController extends Controller
      * @param  \App\Models\Features  $features
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Features $features,$id)
+    public function update(FeaturesEditPost $request, Features $features,$id)
     {
         //
 //        dd($request->all());

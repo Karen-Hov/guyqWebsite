@@ -9,6 +9,7 @@ return [
     'partners' => 'partners',
     'products' => 'products',
     'pricing' => 'pricing',
+    'faq' => 'faq',
 
 
 

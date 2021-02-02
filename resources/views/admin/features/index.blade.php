@@ -98,7 +98,9 @@
                                         <h3>{{isset($item->translate[0]->title)?$item->translate[0]->title:''}} </h3>
                                         <h3>{{isset($item->translate[0]->subtitle)?$item->translate[0]->subtitle:''}} </h3>
                                         <div class="p">{!! isset($item->translate[0]->content)?$item->translate[0]->content:''!!}</div>
-
+                                        <div >
+                                            <img src="{{asset('/storage/features/medium').'/'.$item->file}}" alt="">
+                                        </div>
 {{--                                        <h3>{{$item->faqTranslate[0]->title}}</h3>--}}
 {{--                                        {!! html_entity_decode(isset($item->translate[0]->content)?$item->translate[0]->content:'')!!}--}}
                                     </div>

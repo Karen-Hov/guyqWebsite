@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class Pricing extends Model
 {
@@ -35,9 +36,10 @@ class Pricing extends Model
         $pricing = Pricing::find($id);
 //        dd($pricing);
         if ($request->hasFile('file')) {
-            Storage::delete(Self::$large_image_path . $pricing->file);
-//            Storage::delete('public/pricing/medium/'.$pricing->file);
-            Storage::delete('public/pricing/small/' . $pricing->file);
+//            unlink(public_path('storage/pricing/'.$pricing->file));
+//            unlink(public_path(Self::$large_image_path . $pricing->file));
+//            unlink(public_path(Self::$medium_image_path . $pricing->file));
+//            unlink(public_path(Self::$small_image_path . $pricing->file));
 
         }
         return self::savePricing($request, $pricing);
@@ -53,8 +55,12 @@ class Pricing extends Model
             if ($image_tmp->isValid()) {
                 $extension = $image_tmp->getClientOriginalExtension();
                 $filename = time() . '.' . $extension;
-//
-//                    Image::make($image_tmp)->resize(640,  null, function ($constraint) {
+                Image::make($image_tmp)->save(public_path('storage/pricing/'. $filename));
+                Image::make($image_tmp)->resize(720, 550)->save(Self::$large_image_path. $filename);
+                Image::make($image_tmp)->resize(400, 350)->save(Self::$medium_image_path. $filename);
+                Image::make($image_tmp)->resize(210, 180)->save(Self::$small_image_path. $filename);
+
+                // Image::make($image_tmp)->resize(640,  null, function ($constraint) {
 //                        $constraint->aspectRatio();
 //                    })->save(Self::$large_image_path. $filename);
 ////
@@ -79,9 +85,10 @@ class Pricing extends Model
     public static function deleteItemRow($id)
     {
         $pricing = self::find($id);
-        Storage::delete('public/pricing/large/' . $pricing->file);
-        Storage::delete('public/pricing/medium/' . $pricing->file);
-        Storage::delete('public/pricing/small/' . $pricing->file);
+        unlink(public_path('storage/pricing/'.$pricing->file));
+        unlink(public_path(Self::$large_image_path . $pricing->file));
+        unlink(public_path(Self::$medium_image_path . $pricing->file));
+        unlink(public_path(Self::$small_image_path . $pricing->file));
 
         Pricing::where('id', $id)->delete();
         Translate::where('page_id', $id)->where('type', config('type.pricing'))->delete();

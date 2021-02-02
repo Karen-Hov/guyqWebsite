@@ -37,7 +37,7 @@
                         </div>
                         <div class="widget-content nopadding">
                             <form class="form-horizontal" method="POST"
-                                  action="{{route('faq.update',['faq'=>$faq->id])}}" name="edit_about_us"
+                                  action="{{route('faq.update',$faq->id)}}" name="edit_about_us"
                                   id="edit_about_us" novalidate="novalidate" enctype="multipart/form-data">
                                @csrf
                                 @method('PUT')
@@ -47,7 +47,7 @@
 
 {{--                                    @dd($about_us);--}}
                                     @foreach(config('lang') as $lang)
-                                        @foreach($faq->faqTranslate as $item)
+                                        @foreach($faq->translate as $item)
                                             @if($lang['code'] == $item['code'])
 
                                                 <div role="tabpanel" class="tab-pane @if($loop->first) active @endif"
@@ -55,7 +55,7 @@
 
                                                     <div class="control-group">
                                                         <label for="about_us_title_eidt_{{$lang['code']}}"
-                                                               class="control-label"> Խմբագրել վերնագիր</label>
+                                                               class="control-label"> Խմբագրել հարցը</label>
                                                         <div class="controls">
 
                                                             <input type="text" name="title_{{$lang['code']}}"
@@ -69,9 +69,9 @@
 
 
                                                     <div class="control-group">
-                                                        <label for="content_{{$lang['code']}}" class="control-label">Խմբագրել նյութը</label>
+                                                        <label for="content_{{$lang['code']}}" class="control-label">Խմբագրել պատասխանը</label>
                                                         <div class="controls">
-                                                            <textarea type="text" name="content_{{$lang['code']}}" id=summary-ckeditor_{{$loop->index}}> {{isset($item->desc)? $item->desc :old('content_'.$lang['code']) }}</textarea>
+                                                            <textarea type="text" name="content_{{$lang['code']}}" id=summary-ckeditor_{{$loop->index}}> {{isset($item->content)? $item->content :old('content_'.$lang['code']) }}</textarea>
                                                             @if ($errors->has('content_'.$lang['code']))
                                                                 <span class="valid-error">{{ $errors->first('content_'.$lang['code']) }}</span>
                                                             @endif
@@ -98,6 +98,7 @@
                                         @endforeach
                                     @endforeach
 
+                                    <input type="hidden" name="translate" value="{{config('type.faq')}}">
 
 
                                     <div class="form-actions">

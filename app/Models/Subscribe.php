@@ -21,9 +21,8 @@ class Subscribe extends Model
 
     public static function deleteItemRow($id)
     {
-        SubscribeMail::where('id',$id)->delete();
+        Subscribe::where('id',$id)->delete();
         return true;
-
     }
 
 }

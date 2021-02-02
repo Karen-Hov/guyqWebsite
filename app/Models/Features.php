@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class Features extends Model
 {
@@ -34,27 +35,26 @@ class Features extends Model
     public static function updateFeatures($request,$id)
     {
         $features = Features::find($id);
-//        dd($features);
         if ($request->hasFile('file')) {
-            Storage::delete(Self::$large_image_path . $features->file);
-//            Storage::delete('public/features/medium/'.$features->file);
-            Storage::delete('public/features/small/' . $features->file);
-
+            unlink(public_path('storage/features/'.$features->file));
+            unlink(public_path(Self::$large_image_path . $features->file));
+            unlink(public_path(Self::$medium_image_path . $features->file));
+            unlink(public_path(Self::$small_image_path . $features->file));
         }
         return self::saveFeatures($request, $features);
-
-
     }
 
     public static function saveFeatures($request, $features)
     {
-//dd($request->all());
         if ($request->hasFile('file')) {
             $image_tmp = $request['file'];
             if ($image_tmp->isValid()) {
                 $extension = $image_tmp->getClientOriginalExtension();
                 $filename = time() . '.' . $extension;
-//
+                Image::make($image_tmp)->save(public_path('storage/features/'. $filename));
+                Image::make($image_tmp)->resize(720, 550)->save(Self::$large_image_path. $filename);
+                Image::make($image_tmp)->resize(400, 350)->save(Self::$medium_image_path. $filename);
+                Image::make($image_tmp)->resize(210, 180)->save(Self::$small_image_path. $filename);
 //                    Image::make($image_tmp)->resize(640,  null, function ($constraint) {
 //                        $constraint->aspectRatio();
 //                    })->save(Self::$large_image_path. $filename);
@@ -80,9 +80,10 @@ class Features extends Model
     public static function deleteItemRow($id)
     {
         $features = self::find($id);
-        Storage::delete('public/features/large/' . $features->file);
-        Storage::delete('public/features/medium/' . $features->file);
-        Storage::delete('public/features/small/' . $features->file);
+        unlink(public_path('storage/features/'.$features->file));
+        unlink(public_path(Self::$large_image_path . $features->file));
+        unlink(public_path(Self::$medium_image_path . $features->file));
+        unlink(public_path(Self::$small_image_path . $features->file));
 
         Features::where('id', $id)->delete();
         Translate::where('page_id', $id)->where('type', config('type.features'))->delete();

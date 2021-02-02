@@ -13,21 +13,27 @@ class SubscribeController extends Controller
         $mail = Subscribe::paginate(10);
         return view('admin.subscribe.show')->with('mail',$mail);
     }
-    public function add(StoreUpdatingPost $request){
+    public function add(Request $request){
         $update = new Updating;
         $update->text = $request->text;
         $update->date = $request->date;
         $update->save();
-        return view('admin.subscribe.send')->with('message',"Թարմացումը տեղի կունենա $request->date");
+        return redirect('my_admin/subscribe/send/')->with('message',"Թարմացումը տեղի կունենա $request->date");
     }
 
 
     public function send(Request $request){
-        return view('admin.subscribe.send');
+        $mail = Updating::paginate(10);
+        return view('admin.subscribe.send')->with('mail',$mail);
     }
     public function delete($id)
     {
-        SubscribeMail::deleteItemRow($id);
+        Subscribe::deleteItemRow($id);
+        return response()->json(['status'=>'success'],200);
+    }
+    public function deleteUpdate($id)
+    {
+        Updating::where('id',$id)->delete();
         return response()->json(['status'=>'success'],200);
     }
 }

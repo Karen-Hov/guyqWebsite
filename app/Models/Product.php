@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class Product extends Model
 {
@@ -35,9 +36,10 @@ class Product extends Model
         $products = Product::find($id);
 //        dd($products);
         if ($request->hasFile('file')) {
-            Storage::delete(Self::$large_image_path . $products->file);
-//            Storage::delete('public/products/medium/'.$products->file);
-            Storage::delete('public/products/small/' . $products->file);
+            unlink(public_path('storage/products/'.$products->file));
+            unlink(public_path(Self::$large_image_path . $products->file));
+            unlink(public_path(Self::$medium_image_path . $products->file));
+            unlink(public_path(Self::$small_image_path . $products->file));
 
         }
         return self::saveProduct($request, $products);
@@ -53,7 +55,10 @@ class Product extends Model
             if ($image_tmp->isValid()) {
                 $extension = $image_tmp->getClientOriginalExtension();
                 $filename = time() . '.' . $extension;
-//
+                Image::make($image_tmp)->save(public_path('storage/products/'. $filename));
+                Image::make($image_tmp)->resize(720, 550)->save(Self::$large_image_path. $filename);
+                Image::make($image_tmp)->resize(400, 350)->save(Self::$medium_image_path. $filename);
+                Image::make($image_tmp)->resize(210, 180)->save(Self::$small_image_path. $filename);
 //                    Image::make($image_tmp)->resize(640,  null, function ($constraint) {
 //                        $constraint->aspectRatio();
 //                    })->save(Self::$large_image_path. $filename);
@@ -79,9 +84,10 @@ class Product extends Model
     public static function deleteItemRow($id)
     {
         $products = self::find($id);
-        Storage::delete('public/products/large/' . $products->file);
-        Storage::delete('public/products/medium/' . $products->file);
-        Storage::delete('public/products/small/' . $products->file);
+        unlink(public_path('storage/products/'.$products->file));
+        unlink(public_path(Self::$large_image_path . $products->file));
+        unlink(public_path(Self::$medium_image_path . $products->file));
+        unlink(public_path(Self::$small_image_path . $products->file));
 
         Product::where('id', $id)->delete();
         Translate::where('page_id', $id)->where('type', config('type.products'))->delete();

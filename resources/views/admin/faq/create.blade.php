@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="widget-content nopadding">
-                            <form class="form-horizontal" method="post" action="{{route('faq.store',['type'=>$type])}}"
+                            <form class="form-horizontal" method="post" action="{{route('faq.store')}}"
                                   name="create_about_us" id="create_about_us" novalidate="novalidate"
                                   enctype="multipart/form-data">
                                 @csrf
@@ -97,8 +97,7 @@
 
                                         </div>
 @endforeach
-                                        <input type="hidden" name="type" value="{{$type}}">
-                                        <input type="hidden" name="translate" value="{{config('type.translate.home')}}">
+                                        <input type="hidden" name="translate" value="{{config('type.faq')}}">
 
                                     <div class="form-actions">
                                         <input type="submit" value="Ավելացնել" class="btn btn-success">

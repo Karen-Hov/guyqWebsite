@@ -62,6 +62,7 @@
                                                             @if ($errors->has('title_'.$lang['code']))
                                                                 <span class="valid-error">{{ $errors->first('title_'.$lang['code']) }}</span>
                                                             @endif
+{{--                                                            @dd(isset($item->title),$item->title,old('title_'.$lang['code']))--}}
                                                         </div>
                                                     </div>
 

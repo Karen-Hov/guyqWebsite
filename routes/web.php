@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutUsController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FeaturesController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\PartnersController;
@@ -22,6 +23,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('setlocale/{locale}', function ($locale) {
+    if (in_array($locale,\Config::get('app.locales'))) {
+        session(['locale' => $locale]);
+    }
+    return redirect()->back();
+});
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,23 +39,26 @@ Route::get('/', function () {
 
 Route::prefix('my_admin')->middleware('auth')->group(function () {
     Route::get('/', [HomeController::class,'index']);
-
-
-
     Route::resources([
         'about_us' => AboutUsController::class,
         'features' => FeaturesController::class,
         'partners' => PartnersController::class,
         'products' => ProductController::class,
         'pricing' => PricingController::class,
+        'faq' => FaqController::class,
     ]);
+
+
+
+
     Route::get('messages/contact', [MessageController::class, 'contact'])->name('messages.contact');
     Route::get('messages/partners', [MessageController::class, 'partners'])->name('messages.partners');
     Route::get('messages/request', [MessageController::class, 'request'])->name('messages.request');
     Route::delete('messages/{id}', [MessageController::class, 'destroy'])->name('messages.delete');
 
     Route::get('subscribe/show', [SubscribeController::class,'show']);
-//    Route::post('subscribe/add/opdate', 'Admin\SubscribeController@add');
+    Route::post('subscribe/add/update', [SubscribeController::class,'add']);
+    Route::delete('subscribe/updating/{id}', [SubscribeController::class,'deleteUpdate']);
 ////
     Route::get('subscribe/send',  [SubscribeController::class,'send']);
 //    Route::delete('subscribe/{id}', 'Admin\SubscribeController@delete');
@@ -58,19 +70,7 @@ Route::prefix('my_admin')->middleware('auth')->group(function () {
 
 //    Route::resource('user', 'Admin\UserController');
 //    Route::resource('faq', 'Admin\FaqController');
-//    Route::resource('config', 'Admin\ConfigController');
-//
-//
-//
-//    Route::get('contacts/contact', 'Admin\ContactsController@indexContacts')->name('contacts.contact');
-//    Route::get('contacts/contact', 'Admin\ContactsController@indexContacts')->name('contacts.contact');
-//    Route::get('contacts/partners', 'Admin\ContactsController@indexPartners')->name('contacts.partners');
-//    Route::delete('contacts/{id}', 'Admin\ContactsController@deleteItems')->name('contacts.delete');
-
 
 });
-Route::get('/logout', LoginController::class,'logout');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/logout', [HomeController::class,'logout']);
+Auth::routes(['register' => false]);

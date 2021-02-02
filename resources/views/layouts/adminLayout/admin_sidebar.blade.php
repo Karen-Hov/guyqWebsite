@@ -16,7 +16,7 @@
         <li @if(url()->current()==url('my_admin/products')) class="active" @endif><a href="{{url('my_admin/products')}}"><i class="icon icon-th-list"></i> <span>Ապրանքներ</span></a> </li>
         <li @if(url()->current()==url('my_admin/pricing')) class="active" @endif><a href="{{url('my_admin/pricing')}}"><i class="icon icon-th-list"></i> <span>Pricing</span></a> </li>
 {{--        <li @if(url()->current()==url('my_admin/user')) class="active" @endif><a href="{{url('my_admin/user')}}"><i class="icon icon-th-list"></i> <span>Users</span></a> </li>--}}
-{{--        <li @if(url()->current()==url('my_admin/faq')) class="active" @endif><a href="{{url('my_admin/faq')}}"><i class="icon icon-th-list"></i> <span>Faq</span></a> </li>--}}
+        <li @if(url()->current()==url('my_admin/faq')) class="active" @endif><a href="{{url('my_admin/faq')}}"><i class="icon icon-th-list"></i> <span>ՀՏՀ</span></a> </li>
 {{--        <li @if(url()->current()==url('my_admin/config')) class="active" @endif><a href="{{url('my_admin/config')}}"><i class="icon icon-th-list"></i> <span>Config</span></a> </li>--}}
 
 

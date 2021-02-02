@@ -77,7 +77,9 @@
                                             <h3>{{isset($about_us->translate[0]->title)?$about_us->translate[0]->title:''}} </h3>
                                             <h5>{{isset($about_us->translate[0]->subtitle)?$about_us->translate[0]->subtitle:''}} </h5>
                                             <div class="p">{!! isset($about_us->translate[0]->content)?$about_us->translate[0]->content:''!!}</div>
-                                            {{--                                    {!! html_entity_decode($partners->homeTranslate[0]->desc)!!}--}}
+                                            <div >
+                                              <img src="{{asset('/storage/about_us/medium').'/'.$about_us->file}}" alt="">
+                                             </div>
                                         </div>
                                     </div>
                                 </div>
