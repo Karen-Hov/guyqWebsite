@@ -1,5 +1,15 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutUsController;
+use App\Http\Controllers\Admin\FeaturesController;
+use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\PartnersController;
+use App\Http\Controllers\Admin\PricingController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\SubscribeController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +26,51 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::prefix('my_admin')->middleware('auth')->group(function () {
+    Route::get('/', [HomeController::class,'index']);
+
+
+
+    Route::resources([
+        'about_us' => AboutUsController::class,
+        'features' => FeaturesController::class,
+        'partners' => PartnersController::class,
+        'products' => ProductController::class,
+        'pricing' => PricingController::class,
+    ]);
+    Route::get('messages/contact', [MessageController::class, 'contact'])->name('messages.contact');
+    Route::get('messages/partners', [MessageController::class, 'partners'])->name('messages.partners');
+    Route::get('messages/request', [MessageController::class, 'request'])->name('messages.request');
+    Route::delete('messages/{id}', [MessageController::class, 'destroy'])->name('messages.delete');
+
+    Route::get('subscribe/show', [SubscribeController::class,'show']);
+//    Route::post('subscribe/add/opdate', 'Admin\SubscribeController@add');
+////
+    Route::get('subscribe/send',  [SubscribeController::class,'send']);
+//    Route::delete('subscribe/{id}', 'Admin\SubscribeController@delete');
+
+//    Route::get('settings', 'Admin\AdminController@settings');
+//    Route::get('check-pwd', 'Admin\AdminController@chkPassword');
+//    Route::get('check-pwd', 'Admin\AdminController@chkPassword');
+//    Route::match(['get', 'post'], 'update-pwd', 'Admin\AdminController@updatePassword');
+
+//    Route::resource('user', 'Admin\UserController');
+//    Route::resource('faq', 'Admin\FaqController');
+//    Route::resource('config', 'Admin\ConfigController');
+//
+//
+//
+//    Route::get('contacts/contact', 'Admin\ContactsController@indexContacts')->name('contacts.contact');
+//    Route::get('contacts/contact', 'Admin\ContactsController@indexContacts')->name('contacts.contact');
+//    Route::get('contacts/partners', 'Admin\ContactsController@indexPartners')->name('contacts.partners');
+//    Route::delete('contacts/{id}', 'Admin\ContactsController@deleteItems')->name('contacts.delete');
+
+
+});
+Route::get('/logout', LoginController::class,'logout');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,0 +1,977 @@
+@media screen and (max-width: 1750px) {
+	/*product page*/
+	.sliderParent .owl-carousel .item{
+		       width: 870px;
+    height: 540px;
+    padding: 5px 80px;
+	}
+	.imageQueue .imagePart {
+	    width: 50%;
+	}
+	.imageQueue .gplyAppStore {
+		width: 40%;
+	}
+}
+@media screen and (max-width: 1550px) {
+	.myContainer {
+	    width: 90%;
+	}
+	nav ul li a ,.businnesAndCus button ,.languageAndLogin .login button {
+		font-size: 16px;
+	}
+	.logoPart img {
+	    width: 80px;
+	}
+	.sliderParent .owl-carousel .item{
+		    width:90%;
+	        height: 500px;
+	        padding: 25px ;
+	}
+	.imageQueue .gplyAppStore h1 {
+		font-size: 35px;
+	}
+	.imageQueue .gplyAppStore>p {
+	    font-size: 20px;
+	}
+	.ourFeautures .title h2, .howItWorks .title h2 {
+	    font-size: 40px;
+	}
+	.owlItemContent .image img {
+	    width: 200px;
+	}
+	.owlItemContent .textInfo p {
+		max-width: 500px;
+	}
+	.pricingContent .items .item.proffesional {
+	    padding: 38px 35px;
+	}
+	.pricingContent .items .item {
+		padding: 35px;
+	}
+	.pricingContent .items .item .info ul {
+	    width: 100%;
+	}
+	.selectCustomerOrBusinnes .item {
+    padding: 37px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(8, 44, 35, 0.16);
+    margin: 30px;
+}
+.selectCustomerOrBusinnes .item .image {
+    width: 324px;
+    height: 366px;
+    padding: 5px;
+}
+.selectCustomerOrBusinnes .item .link {
+    text-align: center;
+    width: 250px;
+    margin: 20px auto 0;
+    height: 60px;
+    
+    font-size: 20px;
+    
+}
+.loginPage .myContainer {
+    width: 90%;
+     
+}
+.rightPositionedForm h1 {
+    font-size: 40px;
+    margin-bottom: 100px;
+    text-align: left;
+}
+.rightPositionedForm {
+        width: 60%;
+    height: 100%;
+}
+.loginForm {
+      width: 80%;}
+
+.gifPart {
+    width: 580px;}
+}
+@media screen and (max-width: 1366px) {
+	.owlItemContent .textInfo h3 {
+		font-size: 30px;
+	}
+	.owlItemContent .textInfo h4 {
+	    margin-bottom: 44px;
+	    font-size: 17px;
+	}
+	.sliderParent .owl-carousel .item{
+		    width: 800px;
+	        height: 500px;
+	        padding: 25px ;
+	}
+	img.arrowsOwlCarousel {
+	    width: 30px;
+	}
+	.owl-carousel .owl-nav button.owl-next {
+		right: 20px;
+	}
+	.owl-carousel .owl-nav button.owl-prev {
+		left: 20px;
+	}
+	nav ul li a, .businnesAndCus button, .languageAndLogin .login button {
+	    font-size: 14px;
+	}
+	.businnesAndCus button , .languageAndLogin .login button{
+		width: 135px;
+	}
+	.partnersContent .becamApartner .becamepartnerForm form , .partnersContent .becamApartner .becamepartnerForm h3{
+		    width: 450px;
+	}
+	.partnersContent .becamApartner .imagePart {
+	    width: 47%;
+	}
+	main.contactUs .contactForm {
+	    width: 90%;
+	    flex-wrap: wrap;
+	}
+	main.contactUs form, main.contactUs form input, 
+	main.contactUs form textarea , main.contactUs .imagePart img{
+	    width: 100%;
+	}
+	main.contactUs .infoAndForm , main.contactUs .imagePart{
+	    width: 50%;
+	}
+	main.contactUs .contactForm {
+		padding: 20px;
+	}
+	.imageQueue .imagePart {
+	    width: 45%;
+	}
+	.imageQueue .gplyAppStore {
+	    width: 50%;
+	}
+	.imageQueue .gplyAppStore .icons a img {
+	    width: 150px;
+	}
+	.ourFeautures .title h2, .howItWorks .title h2 {
+	    font-size: 30px;
+	}
+	.ourFeautures .itemsOfFeauture .item .imageParentDiv {
+	    height: 160px;
+	}
+	.ourFeautures .itemsOfFeauture .item img {
+	    height: max-content;
+	    max-height: 100%;
+	}
+	.ourFeautures .itemsOfFeauture .item {
+	    width: 30%;
+	}
+	.ourFeautures .itemsOfFeauture{
+		    width: 100%;
+	}
+	.ourFeautures .itemsOfFeauture .item p {
+		font-size: 20px;
+	}
+	.owlItemContent .textInfo a {
+	    padding: 13px;
+	}
+	.pricingContent .items {
+	    display: none;
+	}
+	.owlCarouselInPricing {
+	    display: block;
+	}
+	.pricingContent .item.proffesional {
+	    padding: 70px;
+	}
+	.errorPage .text .error p.errorNumber {
+	    font-size: 110px;
+	    color: #082C23;
+	}
+	.errorPage .text .error p.error {
+		font-size: 50px;
+	}
+	.errorPage .text .couldntFound {
+	    font-size: 30px;
+	}
+	.errorPage .backHome a {
+		font-size: 15px;
+	}
+	.errorPage .image {
+	    width: 30%;
+	}
+	.gifPart img {
+		    max-width: 100%;
+		    max-height: 100%;
+	}
+	.gifPart {
+        width: 40%;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .rightPositionedForm input {
+    width: 100%;
+}
+	.loginPage .myContainer {
+    width: 80%;
+     
+}
+.loginForm {
+    width: 80%;
+}
+.rightPositionedForm .inputs {
+     
+    padding-right: 50px;
+}
+.rightPositionedForm h1 {
+    font-size: 34px;
+    margin-bottom: 100px;
+    text-align: left;
+}
+.rightPositionedForm {
+       width: 62%;
+    height: 100%;
+}
+.owlCarouselInPricing .item, .pricingContent .item.proffesional {
+       height: 700px;
+    max-width: 360px;
+    
+}
+}
+@media screen and (max-width: 1090px) {
+	.selectCustomerOrBusinnes {
+    padding-bottom: 100px;
+}
+	.myContainer {
+	    width: 96%;
+	}
+.gifPart {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    top: 90%;
+    text-align: center;
+    height: 420px;
+    left: 15%;
+    z-index: 1;
+    align-items: center;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 500px;
+    margin: 0 auto;
+}
+.loginPage .myContainer {
+    width: 80%;
+    height: 570px;
+    margin-bottom: 450px;
+}
+.rightPositionedForm .inputs .item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 40px;
+    margin: 20px auto;
+}
+.loginForm {
+    width: 100%;
+}
+.rightPositionedForm {
+    width: 100%;
+    height: 100%;
+}
+.rightPositionedForm h1 {
+    font-size: 34px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+	.owlItemContent .textInfo p {
+	    line-height: 16px;
+	    margin-bottom: 30px;
+	        font-size: 13px;
+	}
+	.sliderParent .owl-carousel .item{
+	    width: 650px;
+        height: 500px;
+        padding: 25px ;
+	}
+	.owl-carousel .owl-nav button.owl-next {
+		right: 5px;
+	}
+	.owl-carousel .owl-nav button.owl-prev {
+		left: 5px;
+	}
+	.howItWorks  .owlItemContent .image img {
+    width: 200px;
+    margin-top: 0;
+}
+	.productsPage .owlItemContent .textInfo .icons {
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	.owl-carousel .owl-item .icons img {
+	    display: block;
+	    width: 100px;
+	    margin: 5px;
+	}
+	.owlItemContent .image img {
+	    width: 250px;
+	    margin-top: 0;
+	}
+	nav ul li {
+	    margin-right: 10px;
+	}
+	.businnesAndCus {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.businnesAndCus button , .languageAndLogin .login button{
+		width: 165px;
+	}
+	.businnesAndCus button:last-child {
+	    margin-left: 0;
+	}
+	.partnersContent .info {
+	    margin-top: 70px;
+	    margin-bottom: 70px;
+	}
+	.partnersContent .info p {
+	    font-size: 15px;
+	    line-height: 22px;
+	    color: #686868;
+	    margin-bottom: 30px;
+	}
+	.partnersContent .info h3 {
+	    font-size: 25px;
+	    color: #185947;
+	    margin-bottom: 25px;
+	}
+	.partnersContent .info ul li {
+    	width: 100%;
+	    padding-left: 25px;
+	    position: relative;
+	    margin-bottom: 7px;
+	    font-size: 15px;
+	    color: #393939;
+	}
+	.partnersContent .info ul li:before {
+	    content: '';
+	    width: 10px;
+	    height: 10px;
+	    background: radial-gradient(#185B49, #082C23);
+	    position: absolute;
+	    border-radius: 50%;
+	    left: 0;
+	    top: 5px;
+	}
+	.partnersContent .becamApartner .becamepartnerForm form, .partnersContent .becamApartner .becamepartnerForm h3 {
+	    width: 330px;
+	    font-size: 30px;
+	}
+	.partnersContent .becamApartner .becamepartnerForm> p {
+	    font-size: 18px;
+	}
+	.ourFeautures .itemsOfFeauture .item {
+		    height: 260px;
+	}
+	.ourFeautures .itemsOfFeauture .item .imageParentDiv , .industriesItems .item .image{
+	    height: 110px;
+	}
+	.howItWorks.industries .industriesItems {
+	    width: 80%;
+	    max-width: 700px;
+	}
+	.industriesItems .item {
+	    width: 330px;
+	}
+	.owlCarouselInPricing .item , .pricingContent .item.proffesional {
+	    padding: 40px;
+	    border-radius: 15px;
+	    width: 90%;
+        margin: 20px;
+        height: 720px;
+	}
+.errorPage .text .error p.errorNumber {
+    font-size: 90px;
+    color: #082C23;
+}
+.errorPage .text .error p.error {
+    font-size: 40px;
+    margin-right: 30px;
+}
+.errorPage .text .couldntFound {
+    font-size: 24px;
+}
+
+
+}
+@media screen and (max-width: 768px) {
+	.rightPositionedForm h1 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.gifPart {
+	top: 85%;
+	height: 220px;
+    padding: 30px;
+}
+	.errorPage .image.hideINweb {
+  display: block;
+      width: 30%;
+}
+.errorPage .image.hideInMobile {
+  display: none;
+}
+	.owlCarouselInPricing .item, .pricingContent .item.proffesional {
+	   padding: 40px;
+	    border-radius: 15px;
+	    width: 95%;
+	    margin: 50px auto;
+	    height: 560px;
+	    box-shadow: 0 0 10px #80808029;
+	}
+	.pricingContent .item .image {
+    height: 200px;
+}
+.pricingContent {
+    margin: 0;
+}
+	.pricingContent .item button.getStarted , .pricingContent .item.proffesional button.getStarted{
+		font-size: 14px;
+		width: 126px;
+	    height: 40px;
+	}
+	.pricingContent .item .info h3 {
+	    font-size: 27px;
+	}
+	.pricingContent .item .info ul {
+		width: 100%;
+	}
+	.pricingContent .item .info ul li {
+	    font-size: 13px;
+	}
+	.pricingContent .item p.price {
+	    font-size: 32px;
+	}
+	.businnesAndCus button, .languageAndLogin .login button {
+	    width: 100%;
+	    max-width: 160px;
+	}
+	.owl-carousel .owl-nav button.owl-next {
+	    right: 80px;
+	    top: auto;
+	    bottom: -10px;
+	}
+	.owl-carousel .owl-nav button.owl-prev {
+	    left: 80px;
+	    top: auto;
+	    bottom: -10px;
+	}
+	.sliderParent .owl-carousel .item {
+	    width: 90%;
+	    height: max-content;
+	    padding: 25px;
+	}
+	.owlItemContent {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-wrap: wrap;
+	    flex-direction: column-reverse;
+	}
+	.owlItemContent .textInfo {
+	    margin-right: 0;
+	    text-align: center;
+	    margin-top: 20px;
+	}
+
+	.mobileMenuIcon {
+		 display: block;
+	    position: absolute;
+	    right: 10px;
+	    top: 30px;
+	}
+	.languageAndLogin {
+		display: none;
+	}
+	nav {
+		display: none;
+	}
+	.headerInLogin .buttonsInNav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+	.buttonsInNav {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    flex-direction: column-reverse;
+	    padding: 20px 0;
+        position: relative;
+	}
+	.headerInLogin .languageAndLogin .languages button.active {
+    background: #082C23;
+    color: white;
+}
+	.headerInLogin .languageAndLogin .languages button {
+		    border: 2px solid #082C23;
+    color: #185947;
+	}
+	.headerInLogin .languageAndLogin {
+    display: flex;
+}
+	.businnesAndCus {
+	    width: 100%;
+	    justify-content: center;
+	}
+	.logoPart {
+	    width: 100%;
+	    text-align: center;
+	}
+	.businnesAndCus button, .languageAndLogin .login button {
+		margin:15px;
+	}
+	.owlItemContent .textInfo h4{
+		text-align: left;
+	}
+	.owlItemContent .textInfo h3 {
+	    font-size: 27px;
+	    margin: 10px 0;
+	}
+	.owl-carousel .owl-item .icons img {
+		width: 135px;
+	}
+	.productsPage .owlItemContent .textInfo .icons {
+	    display: flex;
+	    flex-wrap: wrap;
+	    flex-direction: column;
+	}
+	.productsPage .owlItemContent .textInfo .icons a {
+		margin: 0;
+	}
+	.owlItemContent .textInfo p {
+	    line-height: 16px;
+	    margin-bottom: 30px;
+	    text-align: left;
+	}
+	.productsPage {
+		margin: 0;
+		padding: 20px 0;
+	}
+	.mobileMenuHiddenInWeb.show .languageAndLogin, 
+	.mobileMenuHiddenInWeb.show {
+		display: block;
+	}
+	.mobileMenuHiddenInWeb {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    background: #185947;
+	    z-index: 1111;
+	    padding: 20px;
+	    color: white;
+	        padding-bottom: 50px;
+	}
+	.languageAndLogin .languages button.active {
+	    background: white;
+	    color: #185947;
+	}
+	.languageAndLogin .languages button {
+	    border: 2px solid white;
+	    color: white;
+	}
+	.mobileMenuHiddenInWeb.show .languageAndLogin ,.mobileMenuHiddenInWeb.show .languageAndLogin .languages{
+		width: 100%;
+		    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+	}
+	.languageAndLogin .login button {
+	    border: 2px solid white;
+	    background: transparent;
+	    color: white;
+	}
+	.closeMenuMobile {
+	    position: absolute;
+	    top: 20px;
+	    left: 20px;
+	}
+	.mobileMenuHiddenInWeb ul {
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+	}
+	.mobileMenuHiddenInWeb ul li{
+		width: 100%;
+		text-align: right;
+	    font-size: 20px;
+	    margin: 5px 0;
+	}
+	footer {
+	    height: max-content;
+	}
+	footer div {
+		flex-wrap: wrap;
+	}
+	footer p {
+	    width: 90%;
+	    font-size: 15px;
+	}
+	footer input.email::placeholder {
+		 font-size: 13px;
+	}
+	footer input.email {
+	    height: 45px;
+    	width: 250px;
+	}
+	footer input.send {
+		height: 45px;
+	    font-size: 13px;
+    	width: 90px;
+	}
+	footer div p, footer div p:not(:last-child){
+	    padding-right:  0px;
+	    border-right: none;
+	    height: max-content;
+	    margin-right: 0;
+	    width: 100%;
+	    margin-bottom: 5px;
+	}
+	.partnersContent .becamApartner .becamepartnerForm {
+	    width: 100%;
+	    padding-right: 0;
+	}
+	.partnersContent .becamApartner .imagePart {
+	    width: 100%;
+	}
+	.partnersContent .becamApartner .myContainer {
+		flex-direction: column-reverse;
+		padding: 50px;
+	}
+	.partnersContent .becamApartner .imagePart img {
+	    width: 100%;
+	    max-width: 350px;
+	    margin-bottom: 20px;
+	}
+	.partnersContent .becamApartner .becamepartnerForm form, .partnersContent .becamApartner .becamepartnerForm h3 {
+	    width: 100%;
+	    font-size: 30px;
+	}
+	.partnersContent .becamApartner .becamepartnerForm textarea , 
+	.partnersContent .becamApartner .becamepartnerForm input ,
+	 main.contactUs form input , main.contactUs form textarea{
+		max-width: 100%;
+		border-radius: 8px;
+	}
+	textarea::placeholder,  input::placeholder{
+	  color: #686868;
+	  font-size: 16px;
+	}
+	.partnersContent .becamApartner .becamepartnerForm input[type="submit"] {
+	    font-size: 14px;
+	    width: 160px;
+	}
+	.partnersContent .info {
+	    margin-top: 20px;
+	    margin-bottom: 50px;
+	}
+
+	main.contactUs .infoAndForm , main.contactUs .imagePart{
+	    width: 100%;
+	}
+	main.contactUs .contactForm {
+	    padding: 20px;
+	    flex-direction: column-reverse;
+	}
+	main.contactUs .imagePart img {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	main.contactUs .infoPart h1 {
+	    font-size: 30px;
+	}
+	.industriesItems .item {
+	    width: 280px;
+	}
+.imageQueue .imagePart {
+    width: 100%;
+    text-align: center;
+}
+.imageQueue {
+    display: flex;
+    flex-wrap: wrap;}
+.imageQueue .imagePart img {
+    width: 100%;
+    max-width: 500px;
+}
+.imageQueue .gplyAppStore {
+    width: 100%;
+}
+.imageQueue .gplyAppStore h1 {
+    font-size: 30px;
+}
+.imageQueue .gplyAppStore>p {
+    font-size: 18px;
+}
+.imageQueue .gplyAppStore>img {
+    display: none;
+}
+.ourFeautures .title h2, .howItWorks .title h2 {
+    font-size: 23px;
+}
+.ourFeautures .itemsOfFeauture .item {
+    width: 45%;
+    margin: 2%;
+}
+.howItWorks {
+    margin-top: 60px;
+}
+.ourFeautures .itemsOfFeauture {
+    justify-content: center;
+}
+.howItWorks .owlItemContent .image img {
+    width: 140px;
+    margin-top: 0;
+}
+.sliderBackgroundDiv {
+    background: rgba(229, 226, 226, 0.44);
+    padding-bottom: 50px;
+}
+.howItWorks .owlItemContent{
+	padding-bottom: 30px;
+}
+.howItWorks.about .owlItemContent {
+    margin: 70px 0 50px;
+}
+.owlItemContent .textInfo a {
+    padding: 13px;
+    font-size: 15px;
+}
+.howItWorks.industries .industriesItems {
+    width: 100%;
+    max-width: 650px;
+        justify-content: center;
+}
+.industriesItems .item {
+    width: 46%;
+    margin: 2%;
+}
+.sliderParent .owl-carousel .item{
+	border-radius: 15px;
+}
+.emptyLine {
+	width: 100px;
+}
+.errorPage .text .error p.errorNumber {
+    font-size: 76px;
+    color: #082C23;
+}
+.errorPage .text .error p.error {
+    font-size: 36px;
+    margin-right: 15px;
+}
+.errorPage .text {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.errorPage .text div.error {
+    width: 100%;
+    margin-bottom: 70px;
+}
+    .mobileInfoAndBACK {
+    	    width: 70%;
+    display: flex;
+    height: max-content;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    }
+    .errorPage .backHome {
+    	margin: 0;
+    }
+    .errorPage .text .couldntFound {
+    font-size: 24px;
+    text-align: right;
+}
+.selectCustomerOrBusinnes .item .image {
+    width: 128px;
+    height: 140px;
+    padding: 5px;
+    margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 500px) {
+	.selectCustomerOrBusinnes .item .link {
+    text-align: center;
+    width: 170px;
+    margin: 20px auto 0;
+    height: 50px;
+    font-size: 15px;
+}
+	.errorPage .text .couldntFound {
+    font-size: 20px;
+    text-align: right;
+}
+.mobileInfoAndBACK {
+    width: 50%;
+}
+    .errorPage .image.hideINweb {
+    display: block;
+    width: 50%;
+}
+.errorPage .backHome {
+    width: 150px;
+}
+.errorPage .backHome a {
+    font-size: 13px;
+}
+	.imageQueue .imagePart img {
+	    width: 100%;
+	    max-width: 300px;
+	}
+	.imageQueue .gplyAppStore h1 {
+	    font-size: 24px;
+	}
+	.myContainer {
+	    width: 96%;
+	    max-width: 370px;
+	}
+	.ourFeautures .itemsOfFeauture .item .imageParentDiv, .industriesItems .item .image {
+	    height: 75px;
+	}
+	.ourFeautures .itemsOfFeauture .item p {
+	    font-size: 12px;
+	    margin-top: 8px;
+	}
+	.ourFeautures .itemsOfFeauture .item {
+	    height: 144px;
+	    border-radius: 10px;
+	}
+	.industriesItems .item p {
+    height: 30px;
+    font-size: 12px;
+}
+.industriesItems .item {
+	padding: 5px;
+}
+.imageQueue .gplyAppStore .icons a img {
+    width: 130px;
+}
+.rightPositionedForm h1 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 30px;
+}
+.rightPositionedForm .inputs {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.loginPage .myContainer {
+    width: 80%;
+    height: 470px;
+    margin-bottom: 300px;
+}
+.rightPositionedForm input {
+    border-radius: 10px;
+}
+.rightPositionedForm h1 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+}
+.loginPage .myContainer {
+    width: 80%;
+    height: 470px;
+    margin-bottom: 300px;
+}
+.loginForm , .gifPart {
+	    border-radius: 10px;
+}
+
+
+
+
+
+}
+@media screen and (max-width: 400px) {
+	.loginPage .myContainer {
+    width: 95%;
+    height: 470px;
+    margin-bottom: 300px;
+}
+	.errorPage .text .couldntFound {
+    font-size: 16px;
+    text-align: right;
+}
+	.ourFeautures .title h2, .howItWorks .title h2 {
+    font-size: 18px;
+    word-break: break-word;
+    font-weight: 100;
+}
+	.myContainer {
+    width: 96%;
+    max-width: 310px;
+}
+	.myContainer {
+    width: 90%;
+}
+	.partnersContent .becamApartner .myContainer {
+	    flex-direction: column-reverse;
+	    padding: 20px;
+	        border-radius: 15px;
+	}
+		.partnersContent .becamApartner .becamepartnerForm> p {
+	    font-size: 15px;
+	}
+	.businnesAndCus button, .languageAndLogin .login button {
+    margin: 5px;
+    max-width: 135px;
+}
+	.owlItemContent .image img {
+		width: 200px;
+	}
+	nav ul li a, .businnesAndCus button, .languageAndLogin .login button {
+	    font-size: 13px;
+	}
+	.businnesAndCus { 
+	    margin-top: 15px;
+	}
+	.owlItemContent .textInfo p, .owlItemContent .textInfo h4 {
+		font-size: 14px;
+	}
+	footer input.email {
+	    height: 40px;
+	    width: 200px;
+	}
+	footer input.send {
+	    height: 40px;
+	    font-size: 12px;
+	    width: 85px;
+	}
+	.partnersContent .info p {
+	    font-size: 13px;
+	    line-height: 20px;
+	}
+	.partnersContent .becamApartner .becamepartnerForm form, .partnersContent .becamApartner .becamepartnerForm h3 {
+	    width: 100%;
+	    font-size: 25px;
+	}
+	textarea::placeholder,  input::placeholder{
+	  color: #686868;
+	  font-size: 14px;
+	}
+}

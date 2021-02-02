@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a16c3c541bd99241cab1c21ce8e83ac",
+    "content-hash": "a1190cfb10374d2bdc2884d6b62ed41d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -761,6 +761,55 @@
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
+            "name": "huddledigital/zendesk-laravel",
+            "version": "3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/huddledigital/zendesk-laravel.git",
+                "reference": "df24d54aa7344549099be4f600b8694fd5ecc6a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/huddledigital/zendesk-laravel/zipball/df24d54aa7344549099be4f600b8694fd5ecc6a4",
+                "reference": "df24d54aa7344549099be4f600b8694fd5ecc6a4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.4|^6.0|^7.0|^8.0",
+                "php": ">=5.4.0",
+                "zendesk/zendesk_api_client_php": "2.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Huddle\\Zendesk\\Providers\\ZendeskServiceProvider"
+                    ],
+                    "aliases": {
+                        "Zendesk": "Huddle\\Zendesk\\Facades\\Zendesk"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Huddle\\Zendesk\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Huddle Digital Ltd",
+                    "email": "info@workwithhuddle.com"
+                }
+            ],
+            "description": "Laravel wrapper for zendesk/zendesk_api_client_php package",
+            "homepage": "http://workwithhuddle.com",
+            "keywords": [
+                "Zendesk"
+            ],
+            "time": "2020-10-05T09:59:55+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v8.24.0",
             "source": {
@@ -988,6 +1037,60 @@
             "time": "2020-10-29T13:07:12+00:00"
         },
         {
+            "name": "laravel/ui",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "a1f82c6283c8373ea1958b8a27c3d5c98cade351"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/a1f82c6283c8373ea1958b8a27c3d5c98cade351",
+                "reference": "a1f82c6283c8373ea1958b8a27c3d5c98cade351",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.0",
+                "illuminate/filesystem": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "time": "2021-01-06T19:20:22+00:00"
+        },
+        {
             "name": "league/commonmark",
             "version": "1.5.7",
             "source": {
@@ -1182,6 +1285,56 @@
             ],
             "description": "Mime-type detection for Flysystem",
             "time": "2021-01-18T20:58:21+00:00"
+        },
+        {
+            "name": "mmucklo/inflect",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mmucklo/inflect.git",
+                "reference": "b665bcd3d4c23b6aa1990b6405ff96dd437689e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mmucklo/inflect/zipball/b665bcd3d4c23b6aa1990b6405ff96dd437689e9",
+                "reference": "b665bcd3d4c23b6aa1990b6405ff96dd437689e9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.17"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Inflect": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sho Kuwamoto",
+                    "email": "sho@kuwamoto.org"
+                },
+                {
+                    "name": "Matthew J. Mucklo",
+                    "email": "mmucklo@gmail.com"
+                }
+            ],
+            "description": "inflect - a memoizing inflector for php",
+            "keywords": [
+                "inflect",
+                "inflector",
+                "pluralize",
+                "singularize",
+                "urlify"
+            ],
+            "time": "2015-05-16T04:16:08+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4039,6 +4192,47 @@
                 "validate"
             ],
             "time": "2020-07-08T17:02:28+00:00"
+        },
+        {
+            "name": "zendesk/zendesk_api_client_php",
+            "version": "v2.2.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendesk/zendesk_api_client_php.git",
+                "reference": "13f0c1f299796cc271a2b84c7eda98b3ab0c97a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendesk/zendesk_api_client_php/zipball/13f0c1f299796cc271a2b84c7eda98b3ab0c97a9",
+                "reference": "13f0c1f299796cc271a2b84c7eda98b3ab0c97a9",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0 || ^7.0",
+                "mmucklo/inflect": "0.3.*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "fzaninotto/faker": ">=1.5.0",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "4.5.*",
+                "psy/psysh": "@stable",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zendesk\\API\\": "src/",
+                    "Zendesk\\Console\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "PHP Client for Zendesk REST API. See https://developer.zendesk.com/rest_api/docs/core/introduction .",
+            "homepage": "https://github.com/zendesk/zendesk_api_client_php",
+            "time": "2020-10-02T15:42:03+00:00"
         }
     ],
     "packages-dev": [
